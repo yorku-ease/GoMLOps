@@ -1,0 +1,36 @@
+{
+    "name": null,
+    "path": null,
+    "python_version": null,
+    "requirements": {
+        "py_reqs": null,
+        "soft_reqs": null,
+        "hard_reqs": null
+    },
+    "workflow": [
+        {
+            "cmd": null,
+            "main": null,
+            "description": null,
+            "steps": [],
+            "args_lib": "argparse",
+            "args": [],
+            "ins": [
+                {
+                    "location": "cloud, local, etc...",
+                    "artifact": "dataset",
+                    "loaded_from": null,
+                    "url": false
+                }
+            ],
+            "outs": [
+                {
+                    "location": "cloud, local, etc...",
+                    "artifact": "dataset",
+                    "loaded_from": null,
+                    "url": false
+                }
+            ]
+        }
+    ]
+}
