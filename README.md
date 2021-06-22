@@ -37,7 +37,7 @@ Its main objective is to:
     ```
 5) A demo code in available to automatically migrate to MLflow (create MLproject and MLflow environnement configuration files) from the generic pipeline
      ```
-    python arg2pipeline/convert.py -mlf [path_generic_pipeline_file]
+    python convert.py -mlf [path_generic_pipeline_file]
     ```
 Work is in progress to support automatic migration to DVC and kubeflow
 
