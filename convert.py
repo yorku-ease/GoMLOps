@@ -149,7 +149,8 @@ class ToMlflow:
                         f.write("# Auto-generated file during conversion. MLflow accepts only .py or .sh files\n")
                         f.write(ep.cmd)
                     ep.cmd = f"bash ex_custom_cmd_step{i}.sh"
-                ep_name = f"step{i}_"+"_".join(ep.steps)
+                
+                ep_name = f"step{i}_"+"_".join(ep.steps) if len(self.input.workflow) > 1 else "main"
                 ep_name = ep_name.replace(" ", "-")
                 p[self.entry_points_title][ep_name] = {}
                 p[self.entry_points_title][ep_name][self.parameters_title] = {}
@@ -168,7 +169,8 @@ class ToMlflow:
                 if not p[self.entry_points_title][ep_name][self.parameters_title]:
                     del p[self.entry_points_title][ep_name][self.parameters_title]
                 i += 1
-            p[self.entry_points_title]["main"]={self.cmd_title: f"python {self.multistep_filename}"}
+            if len(self.input.workflow) > 1:
+                p[self.entry_points_title]["main"]={self.cmd_title: f"python {self.multistep_filename}"}
         if to_file:
             self.export(p, "MLproject")          
         return p                    

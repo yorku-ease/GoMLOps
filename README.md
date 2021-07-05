@@ -35,7 +35,7 @@ Its main objective is to:
      ```
     python arg2pipeline -p [path_to_project]
     ```
-5) A demo code in available to automatically migrate to MLflow (create MLproject and MLflow environnement configuration files) from the generic pipeline
+5) A demo code is available to automatically migrate to MLflow (create MLproject and MLflow environnement configuration files) from the generic pipeline
      ```
     python convert.py -mlf [path_generic_pipeline_file]
     ```
